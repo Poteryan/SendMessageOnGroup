@@ -8,13 +8,14 @@ import json
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.filters.callback_data import CallbackData
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from config import BOT_TOKEN, CHANNEL_ID, ADMIN_IDS
 
 class PaginationCallback(CallbackData, prefix="page"):
     action: str
     page: int
 
 # Add these constants
-USERS_PER_PAGE = 6
+USERS_PER_PAGE = 5
 
 
 async def create_users_keyboard(page: int = 0) -> InlineKeyboardMarkup:
@@ -66,9 +67,6 @@ async def create_users_keyboard(page: int = 0) -> InlineKeyboardMarkup:
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN = '7868672003:AAG_vj3ilteR036Bohazk3lLl1wIMSyuMBg'
-CHANNEL_ID = '@gymtony1'
-ADMIN_IDS = [583416877, 776113835]
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
