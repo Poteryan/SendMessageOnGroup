@@ -14,7 +14,7 @@ class PaginationCallback(CallbackData, prefix="page"):
     page: int
 
 # Add these constants
-USERS_PER_PAGE = 5
+USERS_PER_PAGE = 6
 
 
 async def create_users_keyboard(page: int = 0) -> InlineKeyboardMarkup:
